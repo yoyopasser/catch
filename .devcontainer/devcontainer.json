@@ -1,0 +1,10 @@
+{
+  "name": "台股決策工具",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
+  "forwardPorts": [8501],
+  "portsAttributes": {"8501": {"label": "台股決策工具", "onAutoForward": "openBrowser", "protocol": "http"}},
+  "postCreateCommand": "python -m pip install --upgrade pip && pip install -r requirements-dev.txt && mkdir -p data/cache/history data/exports .codespace && python -m pytest -q",
+  "postStartCommand": "bash .devcontainer/start-server.sh",
+  "remoteEnv": {"PYTHONUNBUFFERED": "1", "TZ": "Asia/Taipei"},
+  "customizations": {"vscode": {"extensions": ["ms-python.python", "ms-python.vscode-pylance"], "settings": {"python.defaultInterpreterPath": "/usr/local/bin/python"}}}
+}
