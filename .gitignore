@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local runtime and secrets
+.env
+.env.*
+!.env.example
+.codespace/
+*.log
+
+# Personal stock data: never commit
+/data/*.db
+/data/*.db-*
+/data/cache/**
+/data/exports/**
+!/data/.gitkeep
+!/data/cache/.gitkeep
+!/data/cache/history/.gitkeep
+!/data/exports/.gitkeep
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
